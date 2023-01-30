@@ -1,15 +1,21 @@
-﻿string[] names; // can reference any size array of strings
+﻿using static System.Console;
+
+Console.WriteLine("my name is Andy Allaico"); 
+Console.WriteLine("Version: {0}", Environment.Version.ToString()); 
+
+
+string[] names; // can reference any size array of strings
 
 // allocating memory for four strings in an array
 names = new string[4];
 
 // storing items at index positions
-names[0] = "Kate";
-names[1] = "Jack";
-names[2] = "Rebecca";
-names[3] = "Tom";
+names[0] = "Andy";
+names[1] = "Melissa";
+names[2] = "Messi";
+names[3] = "Neymar";
 
-string[] names2 = new[] { "Kate", "Jack", "Rebecca", "Tom" };
+string[] names2 = new[] { "Andy", "Melissa", "Messi", "Neymar" };
 
 // looping through the names
 for (int i = 0; i < names2.Length; i++)
@@ -21,8 +27,8 @@ for (int i = 0; i < names2.Length; i++)
 string[,] grid1 = new[,] // two dimensions
 {
   { "Alpha", "Beta", "Gamma", "Delta" },
-  { "Anne", "Ben", "Charlie", "Doug" },
-  { "Aardvark", "Bear", "Cat", "Dog" }
+  { "Anne", "Carter", "Charles", "Duggy" },
+  { "Aardvark", "Bear", "Cat", "Fox" }
 };
 
 WriteLine($"Lower bound of the first dimension is: {grid1.GetLowerBound(0)}");
@@ -42,12 +48,12 @@ for (int row = 0; row <= grid1.GetUpperBound(0); row++)
 string[,] grid2 = new string[3,4]; // allocate memory
 grid2[0, 0] = "Alpha"; // assign string values
 // and so on
-grid2[2, 3] = "Dog";
+grid2[2, 3] = "Fox";
 
 string[][] jagged = new[] // array of string arrays
 {
   new[] { "Alpha", "Beta", "Gamma" },
-  new[] { "Anne", "Ben", "Charlie", "Doug" },
+  new[] { "Anne", "Carter", "Charles", "Duggy" },
   new[] { "Aardvark", "Bear" }
 };
 
@@ -73,18 +79,18 @@ for (int row = 0; row <= jagged.GetUpperBound(0); row++)
 
 int[] sequentialNumbers = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 int[] oneTwoNumbers = new int[] { 1, 2 };
-int[] oneTwoTenNumbers = new int[] { 1, 2, 10 };
-int[] oneTwoThreeTenNumbers = new int[] { 1, 2, 3, 10 };
+int[] oneSixTenNumbers = new int[] { 1, 6, 10 };
+int[] oneTwoFourTenNumbers = new int[] { 1, 2, 4, 10 };
 int[] primeNumbers = new int[] { 2, 3, 5, 7, 11, 13, 17, 19, 23, 29 };
 int[] fibonacciNumbers = new int[] { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89 };
 int[] emptyNumbers = new int[] { };
-int[] threeNumbers = new int[] { 9, 7, 5 };
-int[] sixNumbers = new int[] { 9, 7, 5, 4, 2, 10 };
+int[] threeNumbers = new int[] { 3, 8, 4 };
+int[] sixNumbers = new int[] { 2, 7, 6, 4, 3, 9 };
 
 WriteLine($"{nameof(sequentialNumbers)}: {CheckSwitch(sequentialNumbers)}");
 WriteLine($"{nameof(oneTwoNumbers)}: {CheckSwitch(oneTwoNumbers)}");
-WriteLine($"{nameof(oneTwoTenNumbers)}: {CheckSwitch(oneTwoTenNumbers)}");
-WriteLine($"{nameof(oneTwoThreeTenNumbers)}: {CheckSwitch(oneTwoThreeTenNumbers)}");
+WriteLine($"{nameof(oneSixTenNumbers)}: {CheckSwitch(oneSixTenNumbers)}");
+WriteLine($"{nameof(oneTwoFourTenNumbers)}: {CheckSwitch(oneTwoFourTenNumbers)}");
 WriteLine($"{nameof(primeNumbers)}: {CheckSwitch(primeNumbers)}");
 WriteLine($"{nameof(fibonacciNumbers)}: {CheckSwitch(fibonacciNumbers)}");
 WriteLine($"{nameof(emptyNumbers)}: {CheckSwitch(emptyNumbers)}");
